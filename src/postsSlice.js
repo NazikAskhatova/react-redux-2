@@ -1,9 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { loadUsers } from "./usersSlice";
 
 export const loadPosts = createAsyncThunk(
-  "users/load",
+  "posts/load",
   async (arg, thunkAPI) => {
     const response = await axios.get(
       "https://jsonplaceholder.typicode.com/posts"

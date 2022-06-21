@@ -14,14 +14,16 @@ function App() {
     dispatch(loadPosts());
   }, []);
 
-
   const output = users.map((user) => <li key={user.id}>{user.name}</li>);
-const outputPosts = posts.map((post) => <p key={post.id}>{post.name}</p>);
+  const outputPosts = posts.map((post) => <h5 key={post.body}>{post.title}</h5>);
 
-  return <ul className="App">{output}
-  <article>{outputPosts}</article>
- 
-  </ul> 
+  return (
+    <ul className="App">
+      {output}
+      <hr/>
+      <article>{outputPosts}</article>
+    </ul>
+  );
 }
 
 export default App;
